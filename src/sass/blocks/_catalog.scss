@@ -43,6 +43,7 @@
     min-height: 440px;
     border: 2px solid #e8e8e8;
     padding: 20px 20px 26px 20px;
+    overflow: hidden;
     &__img {
       display: block;
       margin: 0 auto;
@@ -96,6 +97,28 @@
       color: #050505;
       font-size: 20px;
       font-weight: 700;
+    }
+    &__wrapper {
+      display: flex;
+      width: calc(200% + 40px);
+    }
+    &__content {
+      width: 50%;
+      margin-right: 0px;
+      transform: translateX(-100%);
+      &_active {
+        transform: translateX(0%);
+        margin-right: 20px;
+      }
+    }
+    &__list {
+      width: 50%;
+      margin-left: 20px;
+      transform: translateX(0%);
+      &_active {
+        transform: translateX(-100%);
+        margin-right: 0px;
+      }
     }
   }
 }
