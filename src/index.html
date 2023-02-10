@@ -26,7 +26,9 @@
             <a href="tel:+74999228974" class="header__phone"
               >+7 (499) 922-89-74</a
             >
-            <button class="button">заказать звонок</button>
+            <button data-modal="consultation" class="button">
+              заказать звонок
+            </button>
           </div>
         </header>
 
@@ -47,7 +49,9 @@
               Ответим на все вопросы
             </div>
           </div>
-          <button class="button button_main">заказать консультацию</button>
+          <button data-modal="consultation" class="button button_main">
+            заказать консультацию
+          </button>
           <div class="promo__link">
             или
             <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
@@ -234,7 +238,7 @@
                   alt="pulsometr"
                   class="catalog-item__img"
                 />
-                <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                <div class="catalog-item__subtitle">Пульсометр Polar FT1_1</div>
                 <div class="catalog-item__descr">
                   Для первых шагов в тренировках, основанных на сердечном ритме
                 </div>
@@ -517,7 +521,7 @@
     <section class="feed">
       <div class="container">
         <h2 class="title">отзывы клиентов</h2>
-        <div class="feed__itam">
+        <div class="feed__item">
           <img src="img/feed_1.png" alt="Ирина Иванченко" class="feed__img" />
           <div class="feed__text">
             <div class="feed__subtitle">Ирина Иванченко</div>
@@ -535,7 +539,7 @@
           </div>
         </div>
 
-        <div class="feed__itam">
+        <div class="feed__item">
           <img src="img/feed_2.png" alt="Иван Сёмочкин" class="feed__img" />
           <div class="feed__text">
             <div class="feed__subtitle">Иван Сёмочкин</div>
@@ -551,7 +555,7 @@
             </div>
           </div>
         </div>
-        <div class="feed__itam">
+        <div class="feed__item">
           <img src="img/feed_3.png" alt="Юлия Дашкина  " class="feed__img" />
           <div class="feed__text">
             <div class="feed__subtitle">Юлия Дашкина</div>
@@ -599,6 +603,52 @@
         </div>
       </div>
     </footer>
+
+    <div class="overlay">
+      <div class="modal" id="consultation">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">Просто заполните форму заявки</div>
+        <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+        <form class="feed-form feed-form_mt25" action="#">
+          <input name="name" required placeholder="Ваше имя" type="text" />
+          <input
+            name="phone"
+            required
+            placeholder="Ваш телефон"
+            type="number"
+          />
+          <input nsme="email" required placeholder="Ваш E-mail" type="email" />
+          <!-- <input type="submin" value="заказать кОНСУЛЬТАЦИЮ копия" /> -->
+          <button class="button button_submit">заказать консультацию</button>
+        </form>
+      </div>
+
+      <div class="modal" id="order">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">Ваш заказ:</div>
+        <div class="modal__descr">Пульсометр Polar FT1</div>
+        <form class="feed-form feed-form_mt25" action="#">
+          <input name="name" required placeholder="Ваше имя" type="text" />
+          <input
+            name="phone"
+            required
+            placeholder="Ваш телефон"
+            type="number"
+          />
+          <input nsme="email" required placeholder="Ваш E-mail" type="email" />
+          <button class="button button_submit">купить</button>
+        </form>
+      </div>
+
+      <div class="modal modal_mini" id="thanks">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+        <div class="modal__descr">
+          Наш менеджер свяжется с вами в ближайшее время!
+        </div>
+      </div>
+    </div>
+
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.11.0.min.js"
