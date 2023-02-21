@@ -29,4 +29,18 @@
       text-decoration: underline;
     }
   }
+  &__icon {
+    &_animated {
+      //Кратко
+      animation: heartbeat 2s ease infinite;
+      // Длинно
+      // animation-name: heartbeat;
+      // animation-duration: 2s;
+      // animation-timing-function: ease;
+      // animation-iteration-count: infinite;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
 }
